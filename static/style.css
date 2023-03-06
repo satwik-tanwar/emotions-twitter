@@ -1,0 +1,12 @@
+.adjustWidth{
+  margin: 2rem 1rem;
+}
+
+@media screen and (min-width: 600px){
+  .adjustWidth{
+    width: 600px;
+    margin: auto;
+    margin-top: 4rem;
+  }
+
+}
