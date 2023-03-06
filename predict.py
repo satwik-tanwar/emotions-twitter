@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import gdown
 
 import tensorflow as tf
 from tensorflow import keras
@@ -108,6 +109,10 @@ def create_model():
   model.compile(loss=loss, optimizer=optimizer,metrics=['accuracy'])
 
   return model
+
+url='https://drive.google.com/file/d/1qLntWddYtP2k5KiZiDqDDSWW2uNn8EP0/view?usp=share_link'
+output='models/model.h5'
+gdown.download(url=url, output=output, quiet=False, fuzzy=True)
 
 emotionsModel=create_model()
 emotionsModel.load_weights('models/model.h5')
