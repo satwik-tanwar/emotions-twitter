@@ -1,18 +1,25 @@
-# import os
-# class Config(object):
-#     DEBUG = True
-#     TESTING = False
+class Config(object):
+    FLASK_ENV = 'development'
+    DEBUG = False
+    TESTING = False
 
-# class DevelopmentConfig(Config):
-#     SECRET_KEY = "12345"
+class ProductionConfig(Config):
+    FLASK_ENV = 'production'
 
 
+class DevelopmentConfig(Config):
+    DEBUG = True
 
-# config = {
-#     'development': DevelopmentConfig,
-#     'testing': DevelopmentConfig,
-#     'production': DevelopmentConfig
-# }
+
+class TestingConfig(Config):
+    TESTING = True
+
+
+config = {
+    'development': DevelopmentConfig,
+    'testing': TestingConfig,
+    'production': ProductionConfig
+}
 
 import os
 from dotenv import load_dotenv
