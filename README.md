@@ -1,5 +1,5 @@
 # emotions-twitter
-This project classifies the emotion of a tweet. You can either copy paste the tweet in the form provided in the webapp or just paste the link of the tweet.It uses twitter api to extract the tweet and then predicts the following emotions using a BERT-based emotion classifier - 
+This project outputs the emotion of a tweet. You can either copy paste the tweet or just paste the link of the tweet. It uses Twitter API to extract the tweet and then predicts the following emotions using a BERT-based emotion classifier - 
 1. Anger 
 2. Love 
 3. Fear
@@ -19,9 +19,9 @@ ACCESS_TOKEN_SECRET = your_twitter_api_access_token_secret
 ```
 3. Install the requirements in your environment
 ```bash
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 4. Run app.py
 ```bash
-$ python app.py
+python app.py
 ```
