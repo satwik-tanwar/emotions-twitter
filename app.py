@@ -7,8 +7,8 @@ def page_not_found(e):
 
 
 app = Flask(__name__)
-#app.config.from_object(config.config['development'])   #for development
-app.config.from_object(config.config['production'])     #for production
+app.config.from_object(config.config['development'])   #for development
+# app.config.from_object(config.config['production'])     #for production
 
 app.register_error_handler(404, page_not_found)
 
@@ -38,5 +38,5 @@ def predTweetFromURL():
     data['emotion']=emotion
     return render_template('index.html', data=data)   
 
-# if __name__ == '__main__':
-#     app.run(host='0.0.0.0', port='8000', debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port='8000', debug=True)
