@@ -26,4 +26,4 @@ pip install -r requirements.txt
 python app.py
 ```
 
-<span style="color:red">Caution: </span> The ML model may take time to download depending upon your network speed.
+<span style="color:red">*Caution:* </span> The ML model may take time to download depending upon your network speed.
